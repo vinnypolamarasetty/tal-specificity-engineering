@@ -1,0 +1,21 @@
+# Fetched / generated data - regenerate with the pipeline
+data/structures/*.pdb
+data/structures/*.pdbqt
+data/structures/*.json
+data/sequences/*.fasta
+data/ligands/*.pdbqt
+data/ligands/*.sdf
+
+# Trajectories are large
+results/md/*.dcd
+results/docking/*.pdbqt
+
+# Keep the summary tables - they are the result
+!results/**/*.csv
+!results/**/*.json
+
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+.DS_Store

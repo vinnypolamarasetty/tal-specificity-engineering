@@ -1,0 +1,28 @@
+# Core scientific stack
+numpy>=1.26
+scipy>=1.11
+pandas>=2.0
+matplotlib>=3.7
+
+# Cheminformatics and ligand preparation
+rdkit>=2023.9
+meeko>=0.5
+gemmi>=0.6
+
+# Structural biology
+biopython>=1.81
+prody>=2.4
+
+# Molecular dynamics and structure repair
+openmm>=8.1
+pdbfixer @ git+https://github.com/openmm/pdbfixer.git
+MDAnalysis>=2.7
+
+# Visualisation (notebooks)
+py3Dmol>=2.0
+
+# NOTE: AutoDock Vina is a standalone binary, not a pip package.
+#   curl -L -o vina https://github.com/ccsb-scripps/AutoDock-Vina/releases/download/v1.2.5/vina_1.2.5_linux_x86_64
+#   chmod +x vina && sudo mv vina /usr/local/bin/
+# The `vina` Python bindings are deliberately not used: they require Boost
+# headers at build time and fail to install on many systems.
