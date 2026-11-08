@@ -1,0 +1,57 @@
+[
+  {
+    "name": "L-tyrosine",
+    "input_smiles": "N[C@@H](Cc1ccc(O)cc1)C(=O)O",
+    "protonated_smiles": "[NH3+][C@@H](Cc1ccc(O)cc1)C(=O)[O-]",
+    "formal_charge": 0,
+    "mw": 181.19,
+    "heavy_atoms": 13,
+    "rotatable_bonds": 5,
+    "mmff_energy_kcal": 0.581,
+    "pdbqt": "l_tyrosine.pdbqt"
+  },
+  {
+    "name": "L-phenylalanine",
+    "input_smiles": "N[C@@H](Cc1ccccc1)C(=O)O",
+    "protonated_smiles": "[NH3+][C@@H](Cc1ccccc1)C(=O)[O-]",
+    "formal_charge": 0,
+    "mw": 165.19,
+    "heavy_atoms": 12,
+    "rotatable_bonds": 4,
+    "mmff_energy_kcal": 10.828,
+    "pdbqt": "l_phenylalanine.pdbqt"
+  },
+  {
+    "name": "p-coumarate",
+    "input_smiles": "OC(=O)/C=C/c1ccc(O)cc1",
+    "protonated_smiles": "O=C([O-])/C=C/c1ccc(O)cc1",
+    "formal_charge": -1,
+    "mw": 163.15,
+    "heavy_atoms": 12,
+    "rotatable_bonds": 3,
+    "mmff_energy_kcal": -1.625,
+    "pdbqt": "p_coumarate.pdbqt"
+  },
+  {
+    "name": "cinnamate",
+    "input_smiles": "OC(=O)/C=C/c1ccccc1",
+    "protonated_smiles": "O=C([O-])/C=C/c1ccccc1",
+    "formal_charge": -1,
+    "mw": 147.15,
+    "heavy_atoms": 11,
+    "rotatable_bonds": 2,
+    "mmff_energy_kcal": 10.938,
+    "pdbqt": "cinnamate.pdbqt"
+  },
+  {
+    "name": "caffeate",
+    "input_smiles": "OC(=O)/C=C/c1ccc(O)c(O)c1",
+    "protonated_smiles": "O=C([O-])/C=C/c1ccc(O)c(O)c1",
+    "formal_charge": -1,
+    "mw": 179.15,
+    "heavy_atoms": 13,
+    "rotatable_bonds": 4,
+    "mmff_energy_kcal": 3.739,
+    "pdbqt": "caffeate.pdbqt"
+  }
+]
