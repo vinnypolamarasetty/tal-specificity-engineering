@@ -10,6 +10,34 @@ propose anything new.**
 
 ---
 
+## Status
+
+**The machinery is built and tested. It has not yet been run on RsTAL, and this
+repository therefore contains no variant predictions.** That distinction is
+deliberate and is kept visible rather than buried.
+
+What has been verified, by executing it:
+
+| Step | Verified by |
+|------|-------------|
+| `s02_receptor` | Ran on a crystal structure: additive stripping, missing-atom rebuild, protonation, PDBQT conversion |
+| `s03_ligands`  | Built 5/5 substrates; zwitterion states and **(S) stereochemistry confirmed from the generated 3D coordinates** |
+| `s05_profile`  | Ran: active-site shell enumeration and mutable-position shortlist |
+| `s06_mutate`   | Ran: point mutants built; restrained relaxation resolves grafting clashes (+12,663 → −429 kcal/mol on a His→Trp test graft) |
+| `s04_dock`     | Ran: AutoDock Vina 1.2.5, replicate seeds, affinity parsing |
+| `s07_selectivity` | Ran: ΔΔ ranking, replicate-noise propagation, automatic control check |
+| `s08_md`       | Ran: 20 ps implicit-solvent trajectory, backbone RMSD 1.06 Å, active-site RMSF and pocket radius |
+| `s09_library`  | Verified against the genetic code: NNK = 32 codons / 20 aa / 1 stop; NDT = 12 / 12 / 0 |
+
+Those runs used small control proteins to exercise the code paths, not RsTAL.
+
+**What remains:** fetch 2O6Y, run `run_all.sh`, and see whether step 07 recovers
+the published H89F specificity shift. `run_all.sh` stops with a non-zero exit
+code if it does not, rather than proceeding to a saturation scan on a method
+that has failed its own control.
+
+---
+
 ## The problem
 
 Plant polyphenols — naringenin, resveratrol, curcuminoids — are increasingly
